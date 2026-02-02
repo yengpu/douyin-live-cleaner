@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "抖音直播纯净模式助手",
+  "version": "1.0",
+  "description": "自动关闭抖音直播全屏侧边栏和送礼弹窗",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://live.douyin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
